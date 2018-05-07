@@ -43,7 +43,9 @@
     "zone.js": "^0.8.26",
     "bootstrap": "^4.1.0",
     "@ng-bootstrap/ng-bootstrap": "^2.0.0",
-    "@fortawesome/fontawesome-free-webfonts": "^1.0.0"
+    "@fortawesome/fontawesome-free-webfonts": "^1.0.0",
+    "@ionic/core": "^4.0.0-alpha.4",
+    "@ionic/angular": "^4.0.0-alpha.4"
   },
   "devDependencies": {
     "@angular/compiler-cli": "^6.0.0",
