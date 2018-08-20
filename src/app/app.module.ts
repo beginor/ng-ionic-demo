@@ -32,6 +32,7 @@ import { MustangComponent } from './components/mustang/mustang.component';
         ReactiveFormsModule,
         HttpClientModule,
         HttpClientJsonpModule,
+        // NgbModule,
         IonicModule.forRoot(),
         AppRoutingModule
     ],
