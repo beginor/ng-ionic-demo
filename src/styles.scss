@@ -26,5 +26,12 @@ body {
       text-align: center;
       line-height: 48px;
     }
+
+    .ion-popover {
+      max-width: 100% !important;
+      border-radius: 0 !important;
+      border: none !important;
+      background-color: transparent !important;
+    }
   }
 }

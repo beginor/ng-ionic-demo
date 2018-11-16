@@ -4,5 +4,10 @@
   </ion-toolbar>
 </ion-header>
 <ion-content padding>
-  Camaro works!
+  <p>Camaro works!</p>
+  <ion-button [color]="'secondary'" ngbPopover="'hello,world!'" popoverTitle="Test"
+    container="" place>
+    <ion-icon name="heart"></ion-icon>
+    <ion-label>Hello,world!</ion-label>
+  </ion-button>
 </ion-content>

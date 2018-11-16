@@ -1,9 +1,22 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Mustang</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="showPopover($event)">
+        <ion-label>Menu</ion-label>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 <ion-content padding>
   Mustang works!
 </ion-content>
-
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="showPopover($event)">
+        <ion-icon name="apps"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
