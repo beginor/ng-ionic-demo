@@ -11,6 +11,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 import { CamaroComponent } from './components/camaro/camaro.component';
 import { ChargerComponent } from './components/charger/charger.component';
@@ -20,6 +22,8 @@ import { PopoverComponent } from './components/popover/popover.component';
 @NgModule({
     declarations: [
         AppComponent,
+        HomeComponent,
+        AboutComponent,
         TabsComponent,
         CamaroComponent,
         ChargerComponent,
