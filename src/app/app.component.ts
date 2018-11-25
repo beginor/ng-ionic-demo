@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Menu } from '@ionic/angular';
 
 @Component({
     moduleId: module.id,
@@ -8,6 +10,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-    public collapsed = true;
+    private splitPaneVisible = false;
+
+    constructor(
+        private router: Router
+    ) { }
+
+    public onVisibleChange($event: CustomEvent): void {
+        this.splitPaneVisible = $event.detail.visible;
+        console.log(this.splitPaneVisible);
+    }
+
+    public goto(url: string, menu: Menu) {
+        if (!this.splitPaneVisible) {
+            menu.toggle();
+        }
+        this.router.navigateByUrl(url);
+    }
 
 }

@@ -1,24 +1,29 @@
 <ion-app>
-  <ion-menu type="overlay">
-    <ion-header>
-      <ion-toolbar color="dark">
-        <ion-title>Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <ion-menu-toggle>
-          <ion-item routerLink="/">
+  <ion-split-pane (ionSplitPaneVisible)="onVisibleChange($event)">
+    <ion-menu #menu side="start" type="overlay">
+      <ion-header>
+        <ion-toolbar color="dark">
+          <ion-title>Menu</ion-title>
+          <ion-buttons slot="end">
+            <ion-menu-toggle>
+              <ion-button>
+                <ion-icon name="arrow-dropleft"></ion-icon>
+              </ion-button>
+            </ion-menu-toggle>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item (click)="goto('/', menu)">
             <ion-label>Home</ion-label>
           </ion-item>
-        </ion-menu-toggle>
-        <ion-menu-toggle>
-          <ion-item routerLink="/about">
+          <ion-item (click)="goto('/about', menu)">
             <ion-label>About</ion-label>
           </ion-item>
-        </ion-menu-toggle>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
-  <ion-router-outlet main></ion-router-outlet>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>
