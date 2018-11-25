@@ -18,10 +18,9 @@ export class AppComponent {
 
     public onVisibleChange($event: CustomEvent): void {
         this.splitPaneVisible = $event.detail.visible;
-        console.log(this.splitPaneVisible);
     }
 
-    public goto(url: string, menu: Menu) {
+    public navigate(url: string, menu: Menu) {
         if (!this.splitPaneVisible) {
             menu.toggle();
         }
