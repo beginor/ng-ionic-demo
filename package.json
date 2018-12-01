@@ -45,8 +45,8 @@
     "bootstrap": "^4.1.0",
     "@ng-bootstrap/ng-bootstrap": "^4.0.0",
     "@fortawesome/fontawesome-free": "^5.5.0",
-    "@ionic/core": "4.0.0-beta.16",
-    "@ionic/angular": "4.0.0-beta.16"
+    "@ionic/core": "4.0.0-beta.17",
+    "@ionic/angular": "4.0.0-beta.17"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.11.0",
