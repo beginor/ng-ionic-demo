@@ -7,24 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { IonicModule } from '@ionic/angular';
 
+import { AppCommonModule } from './common/app-common.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
-import { AboutComponent } from './components/about/about.component';
-import { CamaroComponent } from './components/camaro/camaro.component';
-import { ChargerComponent } from './components/charger/charger.component';
-import { MustangComponent } from './components/mustang/mustang.component';
-import { PopoverComponent } from './components/popover/popover.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        HomeComponent,
-        AboutComponent,
-        CamaroComponent,
-        ChargerComponent,
-        MustangComponent,
-        PopoverComponent
     ],
     imports: [
         BrowserModule,
@@ -34,10 +23,10 @@ import { PopoverComponent } from './components/popover/popover.component';
         ReactiveFormsModule,
         HttpClientModule,
         HttpClientJsonpModule,
-        IonicModule.forRoot(),
+        NgbModule,
+        AppCommonModule,
         AppRoutingModule
     ],
-    entryComponents: [PopoverComponent],
     bootstrap: [AppComponent]
 })
 export class AppModule {}
