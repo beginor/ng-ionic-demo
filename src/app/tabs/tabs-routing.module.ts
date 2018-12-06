@@ -7,7 +7,7 @@ import { ChargerComponent } from './charger/charger.component';
 
 const routes: Routes = [
     {
-        path: '',
+        path: 'home',
         component: HomeComponent,
         children: [
             {
@@ -16,7 +16,7 @@ const routes: Routes = [
                 component: MustangComponent
             },
             {
-                path: 'mustang',
+                path: 'camaro',
                 outlet: 'tab2',
                 component: CamaroComponent
             },
@@ -26,7 +26,8 @@ const routes: Routes = [
                 component: ChargerComponent
             }
         ]
-    }
+    },
+    { path: '', redirectTo: '/tabs/home/(tab1:mustang)' }
 ];
 
 @NgModule({
