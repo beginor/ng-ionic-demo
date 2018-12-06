@@ -1,6 +1,5 @@
 import { trigger, transition, useAnimation } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { HomeService } from '../services/home.service';
 
 @Component({
     moduleId: module.id,
@@ -10,12 +9,8 @@ import { HomeService } from '../services/home.service';
 })
 export class HomeComponent implements OnInit {
 
-    constructor(public vm: HomeService) { }
+    constructor() { }
 
     public ngOnInit(): void { }
-
-    public onClick(): void {
-        this.vm.addCount();
-    }
 
 }

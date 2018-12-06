@@ -1,30 +1,13 @@
-<ion-tabs>
-
-  <ion-tab tab="mustang">
-    <ion-router-outlet name="tab1"></ion-router-outlet>
-  </ion-tab>
-
-  <ion-tab tab="camaro">
-    <ion-router-outlet name="tab2"></ion-router-outlet>
-  </ion-tab>
-
-  <ion-tab tab="charger">
-    <ion-router-outlet name="tab3"></ion-router-outlet>
-  </ion-tab>
-
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="mustang" color="primary" href="/home/(tab1:mustang)">
-      <ion-icon name="home"></ion-icon>
-      <ion-label>Mustang</ion-label>
-    </ion-tab-button>
-    <ion-tab-button tab="camaro" href="/home/(tab2:camaro)">
-      <ion-icon name="heart"></ion-icon>
-      <ion-label>Camaro</ion-label>
-    </ion-tab-button>
-    <ion-tab-button tab="charger" href="/home/(tab3:charger)">
-      <ion-icon name="star"></ion-icon>
-      <ion-label>Charger</ion-label>
-    </ion-tab-button>
-  </ion-tab-bar>
-
-</ion-tabs>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <ion-button color="primary" fill="outline" expand="block" size="large">
+    {{vm.message}}
+  </ion-button>
+</ion-content>

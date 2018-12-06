@@ -1,6 +1,5 @@
-import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { Menu } from '@ionic/angular';
+import { Component, OnInit } from '@angular/core';
+import { UiService } from './common/app-common.module';
 
 @Component({
     moduleId: module.id,
@@ -8,23 +7,16 @@ import { Menu } from '@ionic/angular';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-
-    private splitPaneVisible = false;
+export class AppComponent implements OnInit {
 
     constructor(
-        private router: Router
+        private vm: UiService
     ) { }
 
-    public onVisibleChange($event: CustomEvent): void {
-        this.splitPaneVisible = $event.detail.visible;
-    }
+    public ngOnInit(): void { }
 
-    public navigate(url: string, menu: Menu) {
-        if (!this.splitPaneVisible) {
-            menu.toggle();
-        }
-        this.router.navigateByUrl(url);
+    public onVisibleChange($event: CustomEvent): void {
+        this.vm.splitPaneVisible = $event.detail.visible;
     }
 
 }

@@ -23,7 +23,7 @@ import { AppComponent } from './app.component';
         ReactiveFormsModule,
         HttpClientModule,
         HttpClientJsonpModule,
-        NgbModule,
+        IonicModule.forRoot({ mode: 'md' }),
         AppCommonModule,
         AppRoutingModule
     ],
