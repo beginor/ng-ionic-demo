@@ -21,6 +21,9 @@ import { PopoverComponent } from './popover/popover.component';
         CommonModule,
         IonicModule,
         TabsRoutingModule
+    ],
+    entryComponents: [
+        PopoverComponent
     ]
 })
 export class TabsModule { }
