@@ -7,27 +7,24 @@ import { ChargerComponent } from './charger/charger.component';
 
 const routes: Routes = [
     {
-        path: 'home',
+        path: '',
         component: HomeComponent,
         children: [
             {
                 path: 'mustang',
-                outlet: 'tab1',
                 component: MustangComponent
             },
             {
                 path: 'camaro',
-                outlet: 'tab2',
                 component: CamaroComponent
             },
             {
                 path: 'charger',
-                outlet: 'tab3',
                 component: ChargerComponent
-            }
+            },
+            { path: '', redirectTo: 'mustang', pathMatch: 'full' }
         ]
-    },
-    { path: '', redirectTo: '/tabs/home/(tab1:mustang)' }
+    }
 ];
 
 @NgModule({

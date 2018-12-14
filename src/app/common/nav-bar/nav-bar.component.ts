@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { Menu } from '@ionic/angular';
+import { IonMenu } from '@ionic/angular';
 import { UiService } from '../services/ui.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { UiService } from '../services/ui.service';
 export class NavBarComponent implements OnInit {
 
     @Input()
-    public menu: Menu;
+    public menu: IonMenu;
 
     constructor(
         private router: Router,
