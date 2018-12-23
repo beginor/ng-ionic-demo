@@ -1,5 +1,8 @@
 @import "./base";
 
+@import './theme/variables';
+@import '~@ionic/angular/css/ionic.bundle.css';
+
 html {
   @include full-width-height();
   @include no-margin-padding();
