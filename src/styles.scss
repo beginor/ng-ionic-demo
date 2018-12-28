@@ -1,7 +1,7 @@
 @import "./base";
 
 @import './theme/variables';
-@import '~@ionic/angular/css/ionic.bundle.css';
+@import '../node_modules/@ionic/angular/css/ionic.bundle.css';
 
 html {
   @include full-width-height();
@@ -28,13 +28,6 @@ body {
       margin-top: -50px;
       text-align: center;
       line-height: 48px;
-    }
-
-    .ion-popover {
-      max-width: 100% !important;
-      border-radius: 0 !important;
-      border: none !important;
-      background-color: transparent !important;
     }
   }
 }

@@ -21,8 +21,7 @@ export class MustangComponent implements OnInit {
             component: PopoverComponent,
             componentProps: {},
             event: $event,
-            showBackdrop: true,
-            cssClass: 'ion-popover'
+            showBackdrop: true
         });
         await popover.present();
         const result = await popover.onDidDismiss();
