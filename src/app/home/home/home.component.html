@@ -12,7 +12,11 @@
   </ion-toolbar>
 </ion-header>
 <ion-content padding>
-  <ion-button color="primary" fill="outline" expand="block" size="large" (click)="onClick()">
-    {{vm.message}}
+  <ion-button color="primary" fill="outline" expand="block" size="large" (click)="vm.updateMessage()">
+    {{vm.message | async}}
   </ion-button>
+
+  <div *ngIf="(vm.info | async) as info" class="alert alert-warning mt-3">
+    {{info}}
+  </div>
 </ion-content>
