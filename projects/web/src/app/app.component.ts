@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { UiService } from './common/app-common.module';
 
 @Component({
-    moduleId: module.id,
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
