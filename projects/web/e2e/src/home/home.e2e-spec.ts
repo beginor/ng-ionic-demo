@@ -1,6 +1,6 @@
 import { HomePage } from './home.po';
 
-describe('ng-ionic-demo Home', () => {
+describe('ng-seed Home', () => {
 
     let page: HomePage;
 

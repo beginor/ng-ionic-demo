@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { IonicModule } from '@ionic/angular';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppCommonModule } from './common/app-common.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -23,7 +23,7 @@ import { AppComponent } from './app.component';
         ReactiveFormsModule,
         HttpClientModule,
         HttpClientJsonpModule,
-        IonicModule.forRoot({ mode: 'md' }),
+        NgbModule,
         AppCommonModule,
         AppRoutingModule
     ],

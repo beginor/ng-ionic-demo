@@ -1,7 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Router } from '@angular/router';
-import { IonMenu } from '@ionic/angular';
-import { UiService } from '../services/ui.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-nav-bar',
@@ -10,21 +7,11 @@ import { UiService } from '../services/ui.service';
 })
 export class NavBarComponent implements OnInit {
 
-    @Input()
-    public menu: IonMenu;
+    public collapsed = true;
 
-    constructor(
-        private router: Router,
-        private ui: UiService
-    ) { }
+    constructor() { }
 
-    public ngOnInit(): void { }
-
-    public navigate(url: string): void {
-        if (!this.ui.splitPaneVisible) {
-            this.menu.toggle();
-        }
-        this.router.navigateByUrl(url);
+    public ngOnInit(): void {
     }
 
 }

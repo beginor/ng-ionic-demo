@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('ng-ionic-demo App', () => {
+describe('ng-seed App', () => {
 
     let page: AppPage;
 

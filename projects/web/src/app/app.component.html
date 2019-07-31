@@ -1,22 +1,4 @@
-<ion-app>
-  <ion-split-pane (ionSplitPaneVisible)="onVisibleChange($event)">
-      <ion-menu #menu side="start" type="overlay">
-          <ion-header>
-            <ion-toolbar color="medium">
-              <ion-title>Menu</ion-title>
-              <ion-buttons slot="end">
-                <ion-menu-toggle>
-                  <ion-button>
-                    <ion-icon name="arrow-dropleft"></ion-icon>
-                  </ion-button>
-                </ion-menu-toggle>
-              </ion-buttons>
-            </ion-toolbar>
-          </ion-header>
-          <ion-content>
-            <app-nav-bar [menu]="menu"></app-nav-bar>
-          </ion-content>
-        </ion-menu>
-    <ion-router-outlet main></ion-router-outlet>
-  </ion-split-pane>
-</ion-app>
+<app-nav-bar></app-nav-bar>
+<div class="app-main">
+  <router-outlet></router-outlet>
+</div>

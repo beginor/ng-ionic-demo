@@ -1,21 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { UiService } from './common/app-common.module';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
-    constructor(
-        private vm: UiService
-    ) { }
-
-    public ngOnInit(): void { }
-
-    public onVisibleChange($event: CustomEvent): void {
-        this.vm.splitPaneVisible = $event.detail.visible;
-    }
+    public collapsed = true;
 
 }
