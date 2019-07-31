@@ -20,7 +20,7 @@ export class NavBarComponent implements OnInit {
 
     public ngOnInit(): void { }
 
-    public navigate(url: string) {
+    public navigate(url: string): void {
         if (!this.ui.splitPaneVisible) {
             this.menu.toggle();
         }

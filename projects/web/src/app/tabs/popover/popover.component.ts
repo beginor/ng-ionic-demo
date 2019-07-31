@@ -12,7 +12,7 @@ export class PopoverComponent implements OnInit {
         private popoverCtl: PopoverController
     ) { }
 
-    ngOnInit() {
+    public ngOnInit(): void {
     }
 
     public closePopover(index: number): void {
