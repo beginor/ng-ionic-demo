@@ -1,6 +1,6 @@
 <ion-app>
   <ion-split-pane (ionSplitPaneVisible)="onVisibleChange($any($event))">
-      <ion-menu #menu side="start" type="overlay">
+      <ion-menu #menu side="start" type="overlay" contentId="main-content">
           <ion-header>
             <ion-toolbar color="medium">
               <ion-title>Menu</ion-title>
@@ -16,7 +16,7 @@
           <ion-content>
             <app-nav-bar [menu]="menu"></app-nav-bar>
           </ion-content>
-        </ion-menu>
-    <ion-router-outlet main></ion-router-outlet>
+      </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
   </ion-split-pane>
 </ion-app>

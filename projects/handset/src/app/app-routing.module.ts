@@ -5,9 +5,9 @@ import { environment } from '../environments/environment';
 // tslint:disable: max-line-length
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-    { path: 'home', loadChildren: './home/home.module#HomeModule' },
-    { path: 'tabs', loadChildren: './tabs/tabs.module#TabsModule' },
-    { path: 'about', loadChildren: './about/about.module#AboutModule' }
+    { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
+    { path: 'tabs', loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsModule) },
+    { path: 'about', loadChildren: () => import('./about/about.module').then(m => m.AboutModule) }
 ];
 // tslint:enable: max-line-length
 

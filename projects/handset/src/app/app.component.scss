@@ -2,4 +2,9 @@
 
 :host {
 
+  #main-content {
+    display: block;
+    @include full-width-height();
+    @include no-margin-padding();
+  }
 }
