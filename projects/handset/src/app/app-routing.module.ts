@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { environment } from '../environments/environment';
 
 // tslint:disable: max-line-length
 const routes: Routes = [

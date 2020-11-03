@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { UiService } from './common/app-common.module';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'handset';
+
+    constructor(
+        private vm: UiService
+    ) { }
+
+    public ngOnInit(): void { }
+
+    public onVisibleChange($event: CustomEvent): void {
+        this.vm.splitPaneVisible = $event.detail.visible;
+    }
+
 }
+

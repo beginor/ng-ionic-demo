@@ -11,7 +11,7 @@ import { UiService } from '../services/ui.service';
 export class NavBarComponent implements OnInit {
 
     @Input()
-    public menu: IonMenu;
+    public menu!: IonMenu;
 
     constructor(
         private router: Router,
