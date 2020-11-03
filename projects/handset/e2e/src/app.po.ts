@@ -1,14 +1,11 @@
-import { browser, by, element, promise } from 'protractor';
+import { browser, by, element } from 'protractor';
 
 export class AppPage {
+  navigateTo(): Promise<unknown> {
+    return browser.get(browser.baseUrl) as Promise<unknown>;
+  }
 
-    public navigateTo(): promise.Promise<any> {
-        browser.sleep(1000);
-        return browser.get('/');
-    }
-
-    public getNavbarBrand(): promise.Promise<string> {
-        return element(by.css('app-root a.navbar-brand')).getText();
-    }
-
+  getTitleText(): Promise<string> {
+    return element(by.css('app-root .content span')).getText() as Promise<string>;
+  }
 }

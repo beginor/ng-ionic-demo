@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
-import { environment } from '../environments/environment';
-
+// tslint:disable: max-line-length
 const routes: Routes = [
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', loadChildren: './home/home.module#HomeModule' },
     { path: 'tabs', loadChildren: './tabs/tabs.module#TabsModule' },
     { path: 'about', loadChildren: './about/about.module#AboutModule' }
 ];
+// tslint:enable: max-line-length
 
 @NgModule({
     imports: [

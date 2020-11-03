@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavBarComponent } from './nav-bar.component';
+import { AppSharedComponent } from './app-shared.component';
 
-describe('NavBarComponent', () => {
-
-    let fixture: ComponentFixture<NavBarComponent>;
-    let component: NavBarComponent;
+describe('AppSharedComponent', () => {
+    let component: AppSharedComponent;
+    let fixture: ComponentFixture<AppSharedComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [NavBarComponent]
-        }).compileComponents();
+            declarations: [AppSharedComponent]
+        })
+        .compileComponents();
     });
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(NavBarComponent);
+        fixture = TestBed.createComponent(AppSharedComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

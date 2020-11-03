@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { HomeService } from './home.service';
+import { AppSharedService } from './app-shared.service';
 
-describe('HomeService', () => {
+describe('AppSharedService', () => {
     beforeEach(() => TestBed.configureTestingModule({}));
 
     it('should be created', () => {
-        const service: HomeService = TestBed.inject(HomeService);
+        const service: AppSharedService = TestBed.inject(AppSharedService);
         expect(service).toBeTruthy();
     });
 });

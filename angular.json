@@ -22,10 +22,20 @@
             "main": "projects/web/src/main.ts",
             "polyfills": "projects/web/src/polyfills.ts",
             "tsConfig": "projects/web/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "projects/web/src/favicon.ico",
               "projects/web/src/assets",
+              {
+                "input": "node_modules/bootstrap-icons",
+                "glob": "*.svg",
+                "output": "assets/icons"
+              },
+              {
+                "input": "node_modules/@fortawesome/fontawesome-free/sprites",
+                "glob": "*.svg",
+                "output": "assets/icons/fontawesome-free"
+              },
               {
                 "glob": "**/*.svg",
                 "input": "node_modules/ionicons/dist/ionicons/svg",
@@ -50,7 +60,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -59,6 +68,11 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ]
             }
@@ -125,6 +139,46 @@
         }
       }
     },
+    "app-shared": {
+      "projectType": "library",
+      "root": "projects/app-shared",
+      "sourceRoot": "projects/app-shared/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/app-shared/tsconfig.lib.json",
+            "project": "projects/app-shared/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/app-shared/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/app-shared/src/test.ts",
+            "tsConfig": "projects/app-shared/tsconfig.spec.json",
+            "karmaConfig": "projects/app-shared/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/app-shared/tsconfig.lib.json",
+              "projects/app-shared/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
     "handset": {
       "projectType": "application",
       "schematics": {
@@ -144,7 +198,7 @@
             "main": "projects/handset/src/main.ts",
             "polyfills": "projects/handset/src/polyfills.ts",
             "tsConfig": "projects/handset/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "projects/handset/src/favicon.ico",
               "projects/handset/src/assets",
@@ -172,7 +226,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -181,6 +234,11 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ]
             }
